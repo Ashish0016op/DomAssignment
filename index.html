@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        justify-content: center;
+    }
+    .Increment_and_decrement{
+        height: 250px;
+        width: 400px;
+        border: 2px solid black;
+        margin:0 auto;
+        text-align: center;
+    }
+    .Inc_Dec_bt{
+        display: flex;
+        gap:10px;
+        text-align: center;
+        justify-content: center;
+    }
+    button.Reset_btn {
+    margin-top: 18px;
+    padding: 10px;
+}
+</style>
+<body>
+    <div class="Increment_and_decrement">
+        <div>
+            <h3>Counter App</h3>
+        </div>
+        <div class="Inc_Dec_bt">
+            <button id="DecrementBtn" class="dec_btn">Decrement by 1</button>
+            <p id="Result">0</p>
+            <button id="IncrementBtn" class="Inc_btn">Increment by 1</button>
+        </div>
+        <button id="ResetBtn" class="Reset_btn">Reset Value</button>
+    </div>
+    <script>
+        const decBtn=document.getElementById("DecrementBtn");
+        const incBtn=document.getElementById("IncrementBtn");
+        const resetBtn=document.getElementById("ResetBtn");
+        const result=document.getElementById("Result");
+        decBtn.addEventListener("click",()=>{
+            let value=result.innerText;
+            value--;
+            result.innerText=value;
+        })
+        incBtn.addEventListener("click",()=>{
+            let value=result.innerText;
+            value++;
+            result.innerText=value;
+        })
+        resetBtn.addEventListener("click",()=>{
+            let value=0;
+            result.innerText=value;
+        })
+
+    </script>
+</body>
+</html>
